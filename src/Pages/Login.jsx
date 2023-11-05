@@ -1,60 +1,87 @@
+import { Link,} from "react-router-dom";
+import GoogleLogin from "./GoogleLogin";
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
+import toast from "react-hot-toast";
 
 
 const Login = () => {
+    const {signIn} = useContext(AuthContext)
+    const handleLogin =(e)=>{
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, password)
+
+        if(password.length < 6){
+            toast.error("Password must be at least 6 character!")
+            return
+          }
+
+        signIn(email, password)
+        .then(res =>{
+            console.log(res)
+        })
+        .catch(error =>{
+            console.log(error)
+        })
+
+    }
   return (
     <div>
-      <form>
-        <label
-          
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >
-          Your Email
-        </label>
-        <div className="relative mb-6">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
-            <svg
-              className="w-4 h-4 text-gray-500 dark:text-gray-400"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 16"
-            >
-              <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
-              <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
-            </svg>
+      <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content flex-col ">
+          <div className="text-center ">
+            <h1 className="text-5xl font-bold mb-10">Login now!</h1>
+            
           </div>
-          <input
-            type="text"
-            id="input-group-1"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="email"
-          />
+          <div className="card w-screen max-w-xl shadow-2xl bg-base-100">
+            <form onSubmit={handleLogin} className="card-body">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Email</span>
+                </label>
+                <input
+                  type="email"
+                  placeholder="email"
+                  className="input input-bordered"
+                  name="email"
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Password</span>
+                </label>
+                <input
+                  type="password"
+                  placeholder="password"
+                  className="input input-bordered"
+                  name="password"
+                  required
+                />
+                <label className="label">
+                  <a href="#" className="label-text-alt link link-hover hover:text-blue-500">
+                    Forgot password?
+                  </a>
+                </label>
+              </div>
+              <div className="form-control p-0">
+                <button type="submit" className="btn btn-neutral">
+                  Login
+                </button>
+              </div>
+              <label className="text-xl mt-5 font-medium font-serif">
+              Do not have an account? Please 
+              <Link to="/register" className="label-text-alt link link-hover">
+                <span className="text-xl font-medium text-blue-500"> Register</span>
+              </Link>
+            </label>
+              <GoogleLogin></GoogleLogin>
+            </form>
+          </div>
         </div>
-        <label
-          
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >
-          Username
-        </label>
-        <div className="flex">
-          <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
-            <svg
-              className="w-4 h-4 text-gray-500 dark:text-gray-400"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
-            </svg>
-          </span>
-          <input
-            type="text"
-            id="website-admin"
-            className="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          />
-        </div>
-      </form>
+      </div>
     </div>
   );
 };
