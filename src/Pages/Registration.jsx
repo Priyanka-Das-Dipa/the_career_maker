@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GoogleLogin from "./GoogleLogin";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Registration = () => {
+  const navigate = useNavigate()
   const {createUser, handleUpdateProfile } = useContext(AuthContext)
   const handleRegister = (e) => {
     e.preventDefault();
