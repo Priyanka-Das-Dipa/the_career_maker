@@ -73,7 +73,7 @@ const Navigation = () => {
               </details>
             </li>
             <li>
-              <NavLink>Login</NavLink>
+              <NavLink to="/login">Login</NavLink>
             </li>
           </ul>
         </div>
