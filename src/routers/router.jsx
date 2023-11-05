@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import MianLayOut from "../layOut/MianLayOut";
 import ErrorPage from "../shared/ErrorPage";
 import Services from "../Pages/Services";
+import Home from "../component/Home/Home";
 import Login from "../Pages/Login";
-import Home from "../Pages/Home";
 import Registration from "../Pages/Registration";
 import MyServices from "../component/MyServices";
 import MySchedules from "../component/MySchedules";
@@ -17,7 +17,7 @@ const myCreatedRouter = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home></Home>,
+        element: <Home></Home>
       },
       {
         path: "service",

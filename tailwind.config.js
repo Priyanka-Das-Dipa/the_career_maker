@@ -8,10 +8,8 @@ export default {
     extend: {},
   },
   plugins: [
-    
+    require('flowbite/plugin'),
     require("daisyui"),
-    require('preline/plugin'),
-    require('flowbite/plugin')
 ]
 }
 
