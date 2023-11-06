@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 
 const Services = () => {
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   const [services, setServices] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/services")
@@ -50,18 +50,23 @@ const Services = () => {
               </p>
             </div>
             <div className="flex justify-center my-3">
-              <button className="btn btn-sm btn-accent">View Details</button>
+              <Link to={`/service/${service._id}`}>
+                <button className="btn btn-sm btn-accent">View Details</button>
+              </Link>
             </div>
           </div>
         ))}
       </div>
       <div className="flex justify-end pt-5">
-        {
-          user ? 
-          <Link to="service"><button className="btn btn-accent my-3 ">See All Services</button></Link>
-          :
-          <Link to="/login"><button className="btn btn-accent my-3 ">See All Services</button></Link>
-        }
+        {user ? (
+          <Link to="service">
+            <button className="btn btn-accent my-3 ">See All Services</button>
+          </Link>
+        ) : (
+          <Link to="/login">
+            <button className="btn btn-accent my-3 ">See All Services</button>
+          </Link>
+        )}
       </div>
     </div>
   );

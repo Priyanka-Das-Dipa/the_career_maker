@@ -8,6 +8,7 @@ import Registration from "../Pages/Registration";
 import MyServices from "../component/MyServices";
 import MySchedules from "../component/MySchedules";
 import AddServices from "../component/AddServices";
+import ServiceDetails from "../Pages/ServiceDetails";
 
 const myCreatedRouter = createBrowserRouter([
   {
@@ -24,6 +25,12 @@ const myCreatedRouter = createBrowserRouter([
         element: <Services></Services>
 
       },
+      {
+        path: "/service/:id",
+        element: <ServiceDetails></ServiceDetails>
+        
+      },
+
       {
         path: "myServices",
         element: <MyServices></MyServices>

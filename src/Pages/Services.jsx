@@ -51,7 +51,9 @@ const Services = () => {
                 </p>
               </div>
               <div className="flex justify-center my-3">
+                <Link to={`/service/${service._id}`}>
                 <button className="btn btn-sm btn-accent">View Details</button>
+                </Link>
               </div>
             </div>
           ))}

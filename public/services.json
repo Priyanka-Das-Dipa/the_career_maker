@@ -9,7 +9,7 @@
       "viewDetailButton": "View Details",
       "serviceProvider": {
         "name": "John Doe",
-        "image": "https://i.ibb.co/54KDp55/John-Abraham.jpg"
+        "serviceProvider": "https://i.ibb.co/54KDp55/John-Abraham.jpg"
       },
       "price": "$50 per session"
     },
