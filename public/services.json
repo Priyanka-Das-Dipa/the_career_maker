@@ -1,0 +1,134 @@
+[
+  
+    {
+      "id": 1,
+      "category": "Fitness Trainer",
+      "serviceName": "Personal Fitness Training",
+      "description": "Get in shape with personalized fitness training sessions.",
+      "serviceImage": "https://i.ibb.co/19GMKZH/powerful-stylish-bodybuilder-with-tattoo-his-arm-doing-exercises-with-dumbbells-isolated-dark-backgr.jpg",
+      "viewDetailButton": "View Details",
+      "serviceProvider": {
+        "name": "John Doe",
+        "image": "https://i.ibb.co/54KDp55/John-Abraham.jpg"
+      },
+      "price": "$50 per session"
+    },
+    {
+      "id": 2,
+      "category": "Yoga Instructor",
+      "serviceName": "Yoga Classes",
+      "description": "Relax and rejuvenate with yoga classes for all levels.",
+      "serviceImage": "https://i.ibb.co/7z2Q0bF/5184243.jpg",
+      "viewDetailButton": "View Details",
+      "serviceProvider": {
+        "name": "Emily Smith",
+        "image": "https://i.ibb.co/gFjPm1r/sara.jpg"
+      },
+      "price": "$30 per class"
+    },
+    {
+      "id": 3,
+      "category": "Personal Coach",
+      "serviceName": "Sports Coaching",
+      "description": "Elevate your sports skills with professional coaching.",
+      "serviceImage": "https://i.ibb.co/b22QqTc/sportscoach.jpg",
+      "viewDetailButton": "View Details",
+      "serviceProvider": {
+        "name": "Alex Johnson",
+        "image": "https://i.ibb.co/54KDp55/John-Abraham.jpg"
+      },
+      "price": "$60 per hour"
+    },
+    {
+      "id": 4,
+      "category": "Sports Partner",
+      "serviceName": "Sports Buddy",
+      "description": "Find like-minded sports enthusiasts to play and compete.",
+      "serviceImage": "https://i.ibb.co/87sLgJR/medium-shot-women-playing-basketball.jpg",
+      "viewDetailButton": "View Details",
+      "serviceProvider": {
+        "name": "Sarah Brown",
+        "image": "https://i.ibb.co/gFjPm1r/sara.jpg"
+      },
+      "price": "Free"
+    },
+    {
+      "id": 5,
+      "category": "Running Buddy",
+      "serviceName": "Running Partner",
+      "description": "Stay motivated with a running partner for your fitness goals.",
+      "serviceImage": "https://i.ibb.co/VDGsy8L/happy-people-doing-sport-park.jpg",
+      "viewDetailButton": "View Details",
+      "serviceProvider": {
+        "name": "Michael Wilson",
+        "image": "https://i.ibb.co/54KDp55/John-Abraham.jpg"
+      },
+      "price": "Varies"
+    },
+    {
+      "id": 6,
+      "category": "Tennis Partner",
+      "serviceName": "Tennis Matches",
+      "description": "Play tennis with partners of your skill level and have fun.",
+      "serviceImage": "https://i.ibb.co/1ZF1wT1/close-up-tennis-racket-tennis-court.jpg",
+      "viewDetailButton": "View Details",
+      "serviceProvider": {
+        "name": "Linda Garcia",
+        "image": "https://i.ibb.co/0D3WnZP/img3.jpg"
+      },
+      "price": "$40 per match"
+    },
+    {
+      "id": 7,
+      "category": "Gym Buddy",
+      "serviceName": "Gym Workout Partner",
+      "description": "Find a gym buddy to work out with and stay committed to your fitness routine.",
+      "serviceImage": "https://i.ibb.co/ByT680F/couple-training-together-gym.jpg",
+      "viewDetailButton": "View Details",
+      "serviceProvider": {
+        "name": "Chris Robinson",
+        "image": "https://source.unsplash.com/200x200/?fashion?4"
+      },
+      "price": "Varies"
+    },
+    {
+      "id": 8,
+      "category": "Swimming Coach",
+      "serviceName": "Swimming Lessons",
+      "description": "Improve your swimming skills with a certified swimming coach.",
+      "serviceImage": "https://i.ibb.co/r2NthBc/coach-teaching-kid-indoor-swimming-pool-how-swim-dive-swimming-lesson-kids-development.jpg",
+      "viewDetailButton": "View Details",
+      "serviceProvider": {
+        "name": "Olivia Turner",
+        "image": "https://source.unsplash.com/200x200/?fashion?4"
+      },
+      "price": "$45 per lesson"
+    },
+    {
+      "id": 9,
+      "category": "Cycling Group",
+      "serviceName": "Group Cycling Rides",
+      "description": "Join a cycling group to explore new routes and enjoy group rides.",
+      "serviceImage": "https://i.ibb.co/YNSCSxt/full-shot-family-cycling-outdoors.jpg",
+      "viewDetailButton": "View Details",
+      "serviceProvider": {
+        "name": "Mark Anderson",
+        "image": "https://i.ibb.co/0D3WnZP/img3.jpg"
+      },
+      "price": "Free"
+    },
+    {
+      "id": 10,
+      "category": "Martial Arts Instructor",
+      "serviceName": "Martial Arts Classes",
+      "description": "Learn self-defense and discipline with a martial arts instructor.",
+      "serviceImage": "https://i.ibb.co/hmZTjQM/karate-fighters.jpg",
+      "viewDetailButton": "View Details",
+      "serviceProvider": {
+        "name": "Sophia Lee",
+        "image": "https://i.ibb.co/gFjPm1r/sara.jpg"
+      },
+      "price": "$55 per class"
+    }
+  
+]
