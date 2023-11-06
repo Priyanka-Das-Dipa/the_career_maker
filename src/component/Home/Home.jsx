@@ -2,6 +2,7 @@ import { Carousel } from "flowbite-react";
 import Faq from "./Faq";
 import About from "./About";
 import Services from "./Services";
+import OurTeam from "./OurTeam";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
         <div className="mt-20 mx-auto w-[650px]"></div>
         <Services></Services>
         <About></About>
+        <OurTeam></OurTeam>
         <Faq></Faq>
       </div>
     </>
