@@ -7,7 +7,7 @@ const MianLayOut = () => {
     <div className="mb-10">
     <Navigation></Navigation>
     </div>
-    <div className="h-screen max-w-[1200] mx-auto ">
+    <div className="h-screen ">
     <Outlet></Outlet>
     </div>
     <Footer></Footer>
