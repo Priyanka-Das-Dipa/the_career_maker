@@ -13,7 +13,7 @@ const Services = () => {
   return (
     <div>
       <h1 className="mb-12 text-4xl font-bold  text-center sm:text-5xl">
-        Our Services
+        Popular Services
       </h1>
       <div className="grid grid-cols-2 gap-5">
         {services?.slice(0, 4).map((service) => (
