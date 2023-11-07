@@ -3,9 +3,9 @@ import { AuthContext } from "../provider/AuthProvider";
 import { Link } from "react-router-dom";
 
 const Services = () => {
-  const { user } = useContext(AuthContext);
+  const { user, loading } = useContext(AuthContext);
   const [services, setServices] = useState([]);
-  const [searchItem, setSearchItem] = useState("");git
+  const [searchItem, setSearchItem] = useState("");
   const [showAll, setShowAll] = useState(false);
   useEffect(() => {
     fetch("http://localhost:5000/services")
@@ -16,7 +16,12 @@ const Services = () => {
   const filteredServices = services.filter((service) =>
     service?.serviceName?.toLowerCase()?.includes(searchItem.toLowerCase())
   );
+  if(loading){
+    return <span className="loading loading-spinner flex justify-center items-center text-center text-red-600 loading-lg"></span> 
+  }
   return (
+    <>
+    
     <div className="max-w-[1200px] mx-auto">
       <div>
         <h1 className="my-12 text-4xl font-bold  text-center sm:text-5xl">
@@ -91,6 +96,8 @@ const Services = () => {
         )}
       </div>
     </div>
+    
+    </>
   );
 };
 

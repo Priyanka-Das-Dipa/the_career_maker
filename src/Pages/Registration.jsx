@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleLogin from "./GoogleLogin";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 
 const Registration = () => {
   const navigate = useNavigate()
+  const location = useLocation()
   const {createUser, handleUpdateProfile } = useContext(AuthContext)
   const handleRegister = (e) => {
     e.preventDefault();
@@ -24,8 +25,8 @@ const Registration = () => {
         handleUpdateProfile(name, img)
                     .then(() => {
                         toast.success('User created successfully');
-                        navigate('/')
-
+                        // navigate('/')
+                        navigate(location?.state ? location.state : "/")
                     })
       })
       .catch(error => {
