@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.17",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.5",
     "firebase": "^10.5.2",
     "flowbite": "^2.0.0",
     "flowbite-react": "^0.6.4",
@@ -22,7 +26,8 @@
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.18.0",
-    "sort-by": "^1.2.0"
+    "sort-by": "^1.2.0",
+    "styled-components": "^6.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
