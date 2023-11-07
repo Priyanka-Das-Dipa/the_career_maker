@@ -23,6 +23,28 @@ const ServiceDetails = () => {
       });
   }, [id]);
 
+  const handleBooking = (e) => {
+    const newBooking = {
+      serviceName: detailData.serviceName,
+      serviceImage: detailData.serviceImage,
+      category: detailData.category,
+      price: detailData.price,
+      description: detailData.description,
+      serviceProvider: detailData.serviceProvider,
+      // Add additional data as needed
+    };
+    console.log(newBooking);
+    fetch("http://localhost:5000/bookings", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newBooking),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
+
   return (
     <>
       <div className="max-w-[1200px] mx-auto flex justify-center items-center mt-10">
@@ -49,7 +71,7 @@ const ServiceDetails = () => {
                   </h3>
                 </div>
               </a>
-              <p className="leadi text-black">{detailData.description}</p>
+              <p className=" text-black">{detailData.description}</p>
             </div>
             <div className="flex items-center gap-3">
               <img
@@ -64,16 +86,26 @@ const ServiceDetails = () => {
           </div>
           <div className="my-5">
             <Link>
-              <button onClick={openModal} className="btn w-full btn-primary">
+              <button
+                onClick={() => {
+                  openModal();
+                  handleBooking();
+                }}
+                // onClick={openModal, handleBooking}
+                className="btn w-full btn-primary"
+              >
                 Book Now
               </button>
             </Link>
           </div>
         </div>
+
         {isModalOpen && (
           <div className="fixed inset-0 flex items-center justify-center z-50">
-            <div className="flex flex-col max-w-md gap-2 p-6 text-white
-             rounded-md shadow-md bg-purple-500 dark:text-gray-100">
+            <div
+              className="flex flex-col max-w-md gap-2 p-6 text-white
+             rounded-md shadow-md bg-purple-500 dark:text-gray-100"
+            >
               <h2 className="flex items-center gap-2 text-xl font-semibold leadi tracki">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -99,12 +131,12 @@ const ServiceDetails = () => {
                 <strong>Service Provider Email:</strong>{" "}
                 {detailData.serviceProvider?.email}
                 <br />
-                <strong>User Email:</strong> 
+                <strong>User Email:</strong>
                 {/* //Add user email here */}
                 <br />
                 <strong>Service Taking Date:</strong>{" "}
                 <input
-                className="text-black w-full"
+                  className="text-black w-full"
                   type="date"
                   // value={detailData.serviceTakingDate}
                   // onChange={(e) => {}}
@@ -119,9 +151,11 @@ const ServiceDetails = () => {
                 />
               </p>
               <div className="flex flex-col justify-end gap-3 mt-6 sm:flex-row">
-                
-                <button onClick={closeModal} className="px-6 btn py-2 rounded-2xl shadow-sm dark:bg-violet-400 dark:text-gray-900">
-                Purchase
+                <button
+                  onClick={closeModal}
+                  className="px-6 btn py-2 rounded-2xl shadow-sm dark:bg-violet-400 dark:text-gray-900"
+                >
+                  Purchase
                 </button>
               </div>
             </div>
