@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { motion } from "framer-motion";
 const Services = () => {
+  
   const { user } = useContext(AuthContext);
   const [services, setServices] = useState([]);
   useEffect(() => {
@@ -24,7 +25,7 @@ const Services = () => {
         >
       <div className="grid grid-cols-2 gap-5">
         {services?.slice(0, 4).map((service) => (
-          <div className="max-w-lg p-4 rounded-3xl shadow-md dark:bg-gray-900 dark:text-gray-100">
+          <div key={service._id} className="max-w-lg p-4 rounded-3xl shadow-md dark:bg-gray-900 dark:text-gray-100">
             <div className="space-y-4">
               <div className="space-y-2">
                 <img

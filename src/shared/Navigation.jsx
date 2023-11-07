@@ -43,7 +43,7 @@ const Navigation = () => {
                 to="service"><span className="text-xl font-semibold">  Services</span></NavLink>
               </li>
 
-              <li>
+              {user? <li>
                 <a className="text-xl font-semibold">Dashboard</a>
                 <ul className="p-2">
                   <li>
@@ -62,7 +62,7 @@ const Navigation = () => {
                     to="mySchedule"><span className="text-xl font-semibold"> My Schedule</span>  </NavLink>
                   </li>
                 </ul>
-              </li>
+              </li> : ''}
             </ul>
           </div>
           <NavLink to="/" className=" normal-case text-2xl font-bold">The Career Maker</NavLink>

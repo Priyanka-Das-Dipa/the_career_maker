@@ -18,7 +18,7 @@ const Services = () => {
         </h1>
         <div className="grid grid-cols-2 justify-evenly items-center mb-10 gap-5">
           {services?.map((service) => (
-            <div className="max-w-lg p-4 rounded-3xl shadow-md dark:bg-gray-900 dark:text-gray-100">
+            <div key={id} className="max-w-lg p-4 rounded-3xl shadow-md dark:bg-gray-900 dark:text-gray-100">
               <div className="space-y-4">
                 <div className="space-y-2">
                   <img
@@ -59,6 +59,7 @@ const Services = () => {
           ))}
         </div>
       </div>
+      
     </div>
   );
 };

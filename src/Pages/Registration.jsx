@@ -34,17 +34,17 @@ const Registration = () => {
     
   };
   return (
-    <div className="hero min-h-screen">
+    <div className="hero min-h-screen background-image">
       <div className="hero-content flex-col">
         <div className="text-center ">
           <h1 className="text-5xl mb-10 font-bold">Register now!</h1>
           
         </div>
-        <div className="card w-screen max-w-xl shadow-2xl bg-base-100">
+        <div className="card w-screen max-w-xl shadow-2xl ">
           <form onSubmit={handleRegister} className="card-body p-10">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Full Name</span>
+                <span className="label-text text-white">Full Name</span>
               </label>
               <input
                 type="text"
@@ -56,7 +56,7 @@ const Registration = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text text-white">Email</span>
               </label>
               <input
                 type="email"
@@ -68,7 +68,7 @@ const Registration = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Image Url</span>
+                <span className="label-text text-white">Image Url</span>
               </label>
               <input
                 type="text"
@@ -80,7 +80,7 @@ const Registration = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Password</span>
+                <span className="label-text text-white">Password</span>
               </label>
               <input
                 type="password"
@@ -91,14 +91,14 @@ const Registration = () => {
               />
             </div>
             <div className="form-control mt-6 p-0">
-              <button className="btn btn-neutral" type="submit">
+              <button className="btn btn-accent" type="submit">
                 Register
               </button>
             </div>
-            <label className="text-xl mt-5 font-medium font-serif">
+            <label className="text-xl mt-5 text-white font-medium font-serif">
               Have an account? Please {" "}
               <Link to="/login" className="label-text-alt link link-hover">
-                <span className="text-xl font-medium text-blue-500"> Login</span>
+                <span className="text-xl font-medium text-green-900"> Login</span>
               </Link>
             </label>
             <GoogleLogin></GoogleLogin>
