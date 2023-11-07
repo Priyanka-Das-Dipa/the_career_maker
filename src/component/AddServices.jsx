@@ -47,7 +47,7 @@ const AddServices = () => {
       <div className="p-24">
         <h2 className="text-5xl text-center font-extrabold">Add A Service</h2>
         <form onSubmit={handleAddService}>
-          <div className="p-24 ">
+          <div className="lg:p-24 ">
             {/* form name and quantity row */}
             <div className="md:flex justify-center gap-5">
               <div className="form-control w-full max-w-xs md:w-1/2">

@@ -1,6 +1,6 @@
 const OurTeam = () => {
   return (
-    <div className="my-10 h-screen">
+    <div className="my-10">
       <h2 className="mb-12 text-4xl font-bold  text-center sm:text-5xl">
         Our Team Coaches
       </h2>

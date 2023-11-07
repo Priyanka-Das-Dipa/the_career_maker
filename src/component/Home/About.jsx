@@ -5,7 +5,7 @@ const About = () => {
         <div className='max-w-[1200px] mx-auto mt-10'>
             <h2 className="mb-12 text-4xl font-bold  text-center sm:text-5xl">About Us</h2>
             <div className=''>
-                <div className='flex gap-4 justify-evenly flex-row-reverse mb-10 '>
+                <div className='md:flex gap-4 justify-evenly md:flex-row-reverse grid grid-cols-1  mb-10 '>
                     <img className='w-96' src="https://i.ibb.co/jz6y62T/5180214.jpg" alt="" />
                     <div className='space-y-3'>
                         <h1 className='text-2xl text-center font-bold'>OUR MISSION</h1>
@@ -14,7 +14,7 @@ const About = () => {
                         </p>
                     </div>
                 </div>
-                <div className='flex gap-4 justify-evenly'>
+                <div className='md:flex gap-4 justify-evenly grid grid-cols-1'>
                     <img className='w-96' src="https://i.ibb.co/LNN9hVR/4089.jpg" alt="" />
                     <div className='mt-7 space-y-3'>
                         <h1 className='text-2xl text-center font-bold'>OUR VISION</h1>
