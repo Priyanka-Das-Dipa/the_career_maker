@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { Link, useParams } from "react-router-dom";
 
 const ServiceDetails = () => {
@@ -6,7 +7,7 @@ const ServiceDetails = () => {
   const [detailData, setDetailData] = useState({});
   const [isModalOpen, setIsModalOpen] = useState(false);
   console.log(detailData);
-
+  const notify = () => toast.success('Successfully added to the My Schedule route');
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -152,7 +153,11 @@ const ServiceDetails = () => {
               </p>
               <div className="flex flex-col justify-end gap-3 mt-6 sm:flex-row">
                 <button
-                  onClick={closeModal}
+                onClick={() => {
+                  notify();
+                  closeModal();
+                }}
+                
                   className="px-6 btn py-2 rounded-2xl shadow-sm dark:bg-violet-400 dark:text-gray-900"
                 >
                   Purchase
