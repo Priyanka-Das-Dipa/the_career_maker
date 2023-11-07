@@ -3,12 +3,15 @@ import About from "./About";
 import Services from "./Services";
 import OurTeam from "./OurTeam";
 
+
 const Home = () => {
   return (
     <>
       <div className="min-h-screen max-w-[1200px] mx-auto">
+        
+         
         <div className="mt-10 mb-32">
-          <section className="dark:bg-gray-800 dark:text-gray-100 background-image" >
+          <section className="dark:bg-gray-800 dark:text-gray-100 background-image">
             <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
               <div className="flex flex-col justify-center ml-2 text-white text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                 <h1 className="text-5xl dark:text-violet-400 font-bold sm:text-6xl">
@@ -38,10 +41,12 @@ const Home = () => {
             </div>
           </section>
         </div>
+        
         <Services></Services>
         <About></About>
         <OurTeam></OurTeam>
         <Faq></Faq>
+        
       </div>
     </>
   );

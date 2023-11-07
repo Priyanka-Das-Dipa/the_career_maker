@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
-
+import { motion } from "framer-motion";
 const Services = () => {
   const { user } = useContext(AuthContext);
   const [services, setServices] = useState([]);
@@ -15,6 +15,13 @@ const Services = () => {
       <h1 className="mb-12 text-4xl font-bold  text-center sm:text-5xl">
         Popular Services
       </h1>
+      <motion.div
+          animate={{
+            scale: [1, 2, 2, 1, 1],
+            rotate: [0, 0, 270, 270, 0],
+            borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+          }}
+        >
       <div className="grid grid-cols-2 gap-5">
         {services?.slice(0, 4).map((service) => (
           <div className="max-w-lg p-4 rounded-3xl shadow-md dark:bg-gray-900 dark:text-gray-100">
@@ -57,6 +64,7 @@ const Services = () => {
           </div>
         ))}
       </div>
+        </motion.div>
       <div className="flex justify-end pt-5">
         {user ? (
           <Link to="service">

@@ -44,10 +44,10 @@ const Services = () => {
                 <img
                   alt=""
                   className="w-12 border h-12 rounded-full ri ri dark:bg-gray-500 ri ri"
-                  src={service.serviceProvider.image}
+                  src={service?.serviceProvider?.image}
                 />
                 <p className="text-md font-bold">
-                  {service.serviceProvider.name}
+                  {service?.serviceProvider?.name}
                 </p>
               </div>
               <div className="flex justify-center my-3">
