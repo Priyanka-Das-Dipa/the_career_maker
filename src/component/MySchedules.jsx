@@ -1,13 +1,21 @@
+import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 const MySchedules = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/bookings", {credentials: 'include'})
-      .then((res) => res.json())
-      .then((data) => setItems(data));
+
+    axios.get("http://localhost:5000/bookings",{
+      withCredentials: true,
+    } ).then(res => setItems(res.data))
+    
+
+    // fetch("http://localhost:5000/bookings")
+    //   .then((res) => res.json())
+    //   .then((data) => setItems(data));
   }, []);
   return (
     <div className="max-w-[1200px] mx-auto">
