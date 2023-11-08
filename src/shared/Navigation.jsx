@@ -42,6 +42,11 @@ const Navigation = () => {
                 className={({ isActive}) => isActive ? "active" : ""}
                 to="service"><span className="text-xl font-semibold">  Services</span></NavLink>
               </li>
+              <li>
+                <NavLink
+                className={({ isActive}) => isActive ? "active" : ""}
+                to="manageService"><span className="text-xl font-semibold">  Manage Service</span></NavLink>
+              </li>
 
               {user?.email && <li>
                 <a className="text-xl font-semibold">Dashboard</a>
@@ -79,6 +84,11 @@ const Navigation = () => {
               className={({ isActive}) => isActive ? "active" : ""}
               to="service"><span className="text-xl font-semibold">  Services</span></NavLink>
             </li>
+            <li>
+                <NavLink
+                className={({ isActive}) => isActive ? "active" : ""}
+                to="manageService"><span className="text-xl font-semibold">  Manage Service</span></NavLink>
+              </li>
             <li tabIndex={0}>
               {
                 user?.email && <details>

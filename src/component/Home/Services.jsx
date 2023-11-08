@@ -38,11 +38,15 @@ const Services = () => {
                 </div>
               </div>
               <div className="space-y-2">
-                <a rel="noopener noreferrer" href="#" className="block">
+                <a rel="noopener noreferrer" href="#" className="flex justify-between">
                   <h3 className="text-xl font-semibold dark:text-violet-400">
                     {" "}
                     {service.serviceName}
                   </h3>
+                  <h3 className="text-xl font-semibold dark:text-violet-400">
+                        {" "}
+                        <span className="text-accent">Location:</span> {service.location}
+                      </h3>
                 </a>
                 <p className=" dark:text-gray-400">{service.description}</p>
               </div>

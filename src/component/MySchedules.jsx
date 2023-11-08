@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const MySchedules = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/bookings")
+    fetch("http://localhost:5000/bookings", {credentials: 'include'})
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
@@ -13,7 +13,7 @@ const MySchedules = () => {
     <div className="max-w-[1200px] mx-auto">
         <h1 className="my-12 text-4xl font-bold  text-center sm:text-5xl">All Schedules</h1>
     <div className="grid grid-cols-2 gap-3 ">
-      {items.map((item) => (
+      {items?.map((item) => (
         <div className="max-w-lg p-4 rounded-3xl shadow-md dark:bg-gray-900 dark:text-gray-100">
           <div className="space-y-4">
             <div className="space-y-2">

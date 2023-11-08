@@ -13,6 +13,7 @@ const AddServices = () => {
     const form = e.target;
     const serviceName = form.serviceName.value;
     const area = form.area.value;
+    const location = form.location.value;
     const category = form.category.value;
     const serviceImage = form.serviceImage.value;
     const price = form.price.value;
@@ -26,6 +27,7 @@ const AddServices = () => {
       serviceName,
       area,
       category,
+      location,
       serviceImage,
       price,
       description,
@@ -125,19 +127,32 @@ const AddServices = () => {
                 />
               </div>
             </div>
-            <div className="md:flex justify-center">
-              <div className="form-control w-full max-w-2xl">
+            <div className="md:flex justify-center gap-5">
+              <div className="form-control w-full max-w-xs ">
                 <label className="label">
-                  <span className="label-text">Category:</span>
+                  <span className="label-text">User Photo Url:</span>
                 </label>
                 <input
                   type="text"
                   name="category"
                   placeholder="Category"
-                  className="input input-bordered  w-full"
+                  className="input input-bordered max-w-xs w-full"
+                />
+              </div>
+              <div className="form-control w-full max-w-xs md:w-1/2">
+                <label className="label">
+                  <span className="label-text">Location:</span>
+                </label>
+                <input
+                  type="text"
+                  name="location"
+                  
+                  placeholder="location"
+                  className="input input-bordered w-full max-w-xs"
                 />
               </div>
             </div>
+
             {/* Photo Url row */}
             <div className="md:flex justify-center">
               <div className="form-control w-full max-w-2xl">
