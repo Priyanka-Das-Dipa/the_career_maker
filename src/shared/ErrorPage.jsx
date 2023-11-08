@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-
+import { Player, Controls } from "@lottiefiles/react-lottie-player";
 const ErrorPage = () => {
   return (
     <div className="my-10">
+      
       <div className="flex justify-center items-center">
         <img
           className="h-[700px] "
@@ -10,7 +11,9 @@ const ErrorPage = () => {
           alt="Error"
         />
       </div>
-      <button className="flex mx-auto btn btn-warning"><Link to="/">Go Home</Link></button>
+      <button className="flex mx-auto btn btn-warning">
+        <Link to="/">Go Home</Link>
+      </button>
     </div>
   );
 };

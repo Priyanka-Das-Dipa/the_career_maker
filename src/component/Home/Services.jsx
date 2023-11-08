@@ -7,7 +7,7 @@ const Services = () => {
   const { user } = useContext(AuthContext);
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://the-career-maker-server-eight.vercel.app/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

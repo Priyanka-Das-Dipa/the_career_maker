@@ -8,14 +8,10 @@ const MySchedules = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
 
-    axios.get("http://localhost:5000/bookings",{
+    axios.get("https://the-career-maker-server-eight.vercel.app/bookings",{
       withCredentials: true,
     } ).then(res => setItems(res.data))
-    
-
-    // fetch("http://localhost:5000/bookings")
-    //   .then((res) => res.json())
-    //   .then((data) => setItems(data));
+  
   }, []);
   return (
     <div className="max-w-[1200px] mx-auto">

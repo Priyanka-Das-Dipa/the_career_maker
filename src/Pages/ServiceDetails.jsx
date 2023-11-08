@@ -16,7 +16,7 @@ const ServiceDetails = () => {
     setIsModalOpen(false);
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/services/${id}`)
+    fetch(`https://the-career-maker-server-eight.vercel.app/services/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setDetailData(data);
@@ -35,7 +35,7 @@ const ServiceDetails = () => {
       // Add additional data as needed
     };
     console.log(newBooking);
-    fetch("http://localhost:5000/bookings", {
+    fetch("https://the-career-maker-server-eight.vercel.app/bookings", {
       method: "POST",
       headers: {
         "content-type": "application/json",

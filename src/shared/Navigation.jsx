@@ -31,7 +31,7 @@ const Navigation = () => {
             >
               <li>
                 <NavLink
-                  className={({ isActive}) => isActive ? "active" : ""}
+                  className={({ isActive }) => (isActive ? "active" : "")}
                   to="/"
                 >
                   <span className="text-xl font-semibold">Home</span>
@@ -39,79 +39,141 @@ const Navigation = () => {
               </li>
               <li>
                 <NavLink
-                className={({ isActive}) => isActive ? "active" : ""}
-                to="service"><span className="text-xl font-semibold">  Services</span></NavLink>
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  to="service"
+                >
+                  <span className="text-xl font-semibold"> Services</span>
+                </NavLink>
               </li>
-              <li>
-                <NavLink
-                className={({ isActive}) => isActive ? "active" : ""}
-                to="manageService"><span className="text-xl font-semibold">  Manage Service</span></NavLink>
-              </li>
+              {user?.email && (
+                <li>
+                  <NavLink
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                    to="manageService"
+                  >
+                    <span className="text-xl font-semibold"> Manage Service </span>
+                  </NavLink>
+                </li>
+              )}
 
-              {user?.email && <li>
-                <a className="text-xl font-semibold">Dashboard</a>
-                <ul className="p-2">
-                  <li>
-                    <NavLink
-                    className={({ isActive}) => isActive ? "active" : ""}
-                    to="myServices"><span className="text-xl font-semibold">My Service</span></NavLink>
-                  </li>
-                  <li>
-                    <NavLink 
-                    className={({ isActive}) => isActive ? "active" : ""}
-                    to="addServices"><span className="text-xl font-semibold">Add Service</span>  </NavLink>
-                  </li>
-                  <li>
-                    <NavLink 
-                    className={({ isActive}) => isActive ? "active" : ""}
-                    to="mySchedule"><span className="text-xl font-semibold"> My Schedule</span>  </NavLink>
-                  </li>
-                </ul>
-              </li> }
+              {user?.email && (
+                <li>
+                  <a className="text-xl font-semibold">Dashboard</a>
+                  <ul className="p-2">
+                    <li>
+                      <NavLink
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                        to="myServices"
+                      >
+                        <span className="text-xl font-semibold">
+                          My Service
+                        </span>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                        to="addServices"
+                      >
+                        <span className="text-xl font-semibold">
+                          Add Service
+                        </span>{" "}
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                        to="mySchedule"
+                      >
+                        <span className="text-xl font-semibold">
+                          {" "}
+                          My Schedule
+                        </span>{" "}
+                      </NavLink>
+                    </li>
+                  </ul>
+                </li>
+              )}
             </ul>
           </div>
-          <NavLink to="/" className=" normal-case text-2xl font-bold">The Career Maker</NavLink>
+          <NavLink to="/" className=" normal-case text-2xl font-bold">
+            The Career Maker
+          </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <NavLink 
-              className={({ isActive}) => isActive ? "active" : ""}
-              to="/"> <span className="text-xl font-semibold">Home</span></NavLink>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "")}
+                to="/"
+              >
+                
+                <span className="text-xl font-semibold">Home</span>
+              </NavLink>
             </li>
-            <li>
-              <NavLink 
-              className={({ isActive}) => isActive ? "active" : ""}
-              to="service"><span className="text-xl font-semibold">  Services</span></NavLink>
-            </li>
-            <li>
+            {user?.email && (
+              <li>
                 <NavLink
-                className={({ isActive}) => isActive ? "active" : ""}
-                to="manageService"><span className="text-xl font-semibold">  Manage Service</span></NavLink>
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  to="manageService"
+                >
+                  <span className="text-xl font-semibold"> Manage Service</span>
+                </NavLink>
               </li>
+            )}
+            <li>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "")}
+                to="service"
+              >
+                <span className="text-xl font-semibold"> Services</span>
+              </NavLink>
+            </li>
+
             <li tabIndex={0}>
-              {
-                user?.email && <details>
-                <summary className="text-xl font-semibold"> Dashboard</summary>
-                <ul className="p-2">
-                  <li className="">
-                    <NavLink  
-                    className={({ isActive}) => isActive ? "active" : ""}
-                    to="myServices"> <span className="text-lg font-semibold">My Service</span></NavLink>
-                  </li>
-                  <li>
-                    <NavLink 
-                    className={({ isActive}) => isActive ? "active" : ""}
-                    to="addServices"> <span className="text-lg font-semibold">Add Service</span> </NavLink>
-                  </li>
-                  <li>
-                    <NavLink 
-                    className={({ isActive}) => isActive ? "active" : ""}
-                    to="mySchedule"><span className="text-lg font-semibold"> My Schedule</span>  </NavLink>
-                  </li>
-                </ul>
-              </details>
-              }
+              {user?.email && (
+                <details>
+                  <summary className="text-xl font-semibold">
+                    {" "}
+                    Dashboard
+                  </summary>
+                  <ul className="p-2">
+                    <li className="">
+                      <NavLink
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                        to="myServices"
+                      >
+                        {" "}
+                        <span className="text-lg font-semibold">
+                          My Service
+                        </span>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                        to="addServices"
+                      >
+                        {" "}
+                        <span className="text-lg font-semibold">
+                          Add Service
+                        </span>{" "}
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                        to="mySchedule"
+                      >
+                        <span className="text-lg font-semibold">
+                          {" "}
+                          My Schedule
+                        </span>{" "}
+                      </NavLink>
+                    </li>
+                  </ul>
+                </details>
+              )}
             </li>
           </ul>
         </div>

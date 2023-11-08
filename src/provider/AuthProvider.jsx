@@ -49,14 +49,14 @@ const AuthProvider = ({ children }) => {
       //    token
       if (user) {
         axios
-          .post("http://localhost:5000/jwt", loggedUser, {
+          .post("https://the-career-maker-server-eight.vercel.app/jwt", loggedUser, {
             withCredentials: true,
           })
           .then((res) => {
             console.log("Token Response", res.data);
           });
       } else {
-        axios.post("http://localhost:5000/logout", loggedUser, {
+        axios.post("https://the-career-maker-server-eight.vercel.app/logout", loggedUser, {
             withCredentials: true
         })
         .then(res => console.log(res.data))
