@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.17",
     "@mui/styled-engine-sc": "^6.0.0-alpha.5",
+    "axios": "^1.6.0",
     "firebase": "^10.5.2",
     "flowbite": "^2.0.0",
     "flowbite-react": "^0.6.4",
