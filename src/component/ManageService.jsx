@@ -6,7 +6,7 @@ const ManageService = () => {
   const { id } = useParams();
   const [addServices, setAddServices] = useState();
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://the-career-maker-server-eight.vercel.app/services")
       .then((res) => res.json())
       .then((data) => setAddServices(data));
   }, []);
@@ -23,7 +23,7 @@ const ManageService = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/services/${serviceId}`, {
+        fetch(`https://the-career-maker-server-eight.vercel.app/services/${serviceId}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

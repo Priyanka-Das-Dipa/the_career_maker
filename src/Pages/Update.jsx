@@ -52,7 +52,7 @@ const Update = () => {
     };
     console.log(updateService);
 
-    fetch(`http://localhost:5000/services/${_id}`, {
+    fetch(`https://the-career-maker-server-eight.vercel.app/services/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

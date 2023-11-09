@@ -7,6 +7,7 @@ const AddServices = () => {
   const { user } = useContext(AuthContext);
   const userName = user.displayName;
   const userImage = user.photoURL;
+  const sellerEmail = user.email;
   console.log(userName, userImage);
   const handleAddService = (e) => {
     e.preventDefault();
@@ -17,13 +18,15 @@ const AddServices = () => {
     const category = form.category.value;
     const serviceImage = form.serviceImage.value;
     const serviceProvider = {
-      name: form.name.value,
-      image: form.image.value  
+      name: user.displayName,
+      email: user.email,
+      image: user.photoURL  
     }
     const price = form.price.value;
     const description = form.description.value;
     const newService = {
       userImage,
+      sellerEmail,
       serviceProvider,
       userName,
       serviceName,
@@ -36,7 +39,7 @@ const AddServices = () => {
     };
     console.log(newService);
 
-    fetch("http://localhost:5000/services", {
+    fetch("https://the-career-maker-server-eight.vercel.app/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -156,8 +159,8 @@ const AddServices = () => {
             </div>
 
             {/* Photo Url row */}
-            <div className="md:flex justify-center">
-              <div className="form-control w-full max-w-2xl">
+            <div className="md:flex justify-center gap-5">
+              <div className="form-control w-full max-w-xs">
                 <label className="label">
                   <span className="label-text">Description:</span>
                 </label>
@@ -165,7 +168,19 @@ const AddServices = () => {
                   type="text"
                   name="description"
                   placeholder="Description"
-                  className="input input-bordered  w-full"
+                  className="input input-bordered  w-1/2"
+                />
+              </div>
+              <div className="form-control w-full max-w-xs md:w-1/2">
+                <label className="label">
+                  <span className="label-text">Seller Email:</span>
+                </label>
+                <input
+                  type="email"
+                  name="name"
+                  value={sellerEmail}
+                  placeholder="email"
+                  className="input input-bordered w-full max-w-xs"
                 />
               </div>
             </div>

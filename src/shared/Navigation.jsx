@@ -63,7 +63,7 @@ const Navigation = () => {
                     <li>
                       <NavLink
                         className={({ isActive }) => (isActive ? "active" : "")}
-                        to="myServices"
+                        to="service"
                       >
                         <span className="text-xl font-semibold">
                           My Service
@@ -141,7 +141,7 @@ const Navigation = () => {
                     <li className="">
                       <NavLink
                         className={({ isActive }) => (isActive ? "active" : "")}
-                        to="myServices"
+                        to="service"
                       >
                         {" "}
                         <span className="text-lg font-semibold">

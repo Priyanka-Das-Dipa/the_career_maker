@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useParams } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const ServiceDetails = () => {
+  const {user} = useContext(AuthContext);
   const { id } = useParams();
   const [detailData, setDetailData] = useState({});
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,7 +18,7 @@ const ServiceDetails = () => {
     setIsModalOpen(false);
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/services/${id}`)
+    fetch(`https://the-career-maker-server-eight.vercel.app/services/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setDetailData(data);
@@ -32,6 +34,7 @@ const ServiceDetails = () => {
       price: detailData.price,
       description: detailData.description,
       serviceProvider: detailData.serviceProvider,
+      buyerEmail: user.email
       // Add additional data as needed
     };
     console.log(newBooking);
@@ -77,11 +80,11 @@ const ServiceDetails = () => {
             <div className="flex items-center gap-3">
               <img
                 className="w-12 border h-12 rounded-full ri ri dark:bg-blue-600 ri ri"
-                src={detailData.serviceProvider?.image}
+                src={user?.image}
                 alt=""
               />
               <h1 className="text-xl font-bold">
-                {detailData.serviceProvider?.name}
+                {user?.name}
               </h1>
             </div>
           </div>
@@ -132,7 +135,7 @@ const ServiceDetails = () => {
                 <strong>Service Provider Email:</strong>{" "}
                 {detailData.serviceProvider?.email}
                 <br />
-                <strong>User Email:</strong>
+                <strong>User Email: {user?.email}</strong>
                 {/* //Add user email here */}
                 <br />
                 <strong>Service Taking Date:</strong>{" "}
