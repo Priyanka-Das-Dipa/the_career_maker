@@ -75,7 +75,7 @@ const myCreatedRouter = createBrowserRouter([
       {
         path: "/update/:id",
         element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({params}) => fetch(`https://the-career-maker-server-eight.vercel.app/services/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
       }
     ],
   },

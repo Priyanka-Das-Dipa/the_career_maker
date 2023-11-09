@@ -16,7 +16,7 @@ const ServiceDetails = () => {
     setIsModalOpen(false);
   };
   useEffect(() => {
-    fetch(`https://the-career-maker-server-eight.vercel.app/services/${id}`)
+    fetch(`http://localhost:5000/services/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setDetailData(data);

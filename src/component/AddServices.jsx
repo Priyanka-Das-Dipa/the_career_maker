@@ -36,7 +36,7 @@ const AddServices = () => {
     };
     console.log(newService);
 
-    fetch("https://the-career-maker-server-eight.vercel.app/services", {
+    fetch("http://localhost:5000/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -132,7 +132,7 @@ const AddServices = () => {
             <div className="md:flex justify-center gap-5">
               <div className="form-control w-full max-w-xs ">
                 <label className="label">
-                  <span className="label-text">User Photo Url:</span>
+                  <span className="label-text">Category:</span>
                 </label>
                 <input
                   type="text"

@@ -8,7 +8,7 @@ const Services = () => {
   const [searchItem, setSearchItem] = useState("");
   const [showAll, setShowAll] = useState(false);
   useEffect(() => {
-    fetch("https://the-career-maker-server-eight.vercel.app/services")
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
