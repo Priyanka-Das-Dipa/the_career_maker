@@ -3,10 +3,11 @@ import GoogleLogin from "./GoogleLogin";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
-  const location = useLocation()
+  const location = useLocation();
   const { signIn } = useContext(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault();
@@ -23,7 +24,15 @@ const Login = () => {
       .then((res) => {
         console.log(res);
         toast.success("User created successfully");
-        navigate(location?.state ? location.state : "/")
+        navigate(location?.state ? location.state : "/");
+        // axios
+        //   .post("https://the-career-maker-server-eight.vercel.app/jwt", user, { withCredentials: true })
+        //   .then((res) => {
+        //     console.log(res.data);
+        //     if (res.data.success) {
+        //       navigate(location?.state ? location.state : "/");
+        //     }
+        //   });
       })
       .catch((error) => {
         console.log(error);

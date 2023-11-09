@@ -15,6 +15,7 @@ const GoogleLogin = () => {
         console.log(res);
         toast.success('User logged in successfully');
         navigate(location?.state ? location.state : "/")
+        
       })
       .catch((error) => {
         console.log(error);

@@ -11,6 +11,7 @@ import AddServices from "../component/AddServices";
 import ServiceDetails from "../Pages/ServiceDetails";
 import PrivateRoute from "./PrivateRoute";
 import ManageService from "../component/ManageService";
+import Update from "../Pages/Update";
 
 const myCreatedRouter = createBrowserRouter([
   {
@@ -24,7 +25,11 @@ const myCreatedRouter = createBrowserRouter([
       },
       {
         path: "service",
-        element: <Services></Services>,
+        element: (
+          <PrivateRoute>
+            <Services></Services>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/service/:id",
@@ -67,6 +72,11 @@ const myCreatedRouter = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: "/update/:id",
+        element: <PrivateRoute><Update></Update></PrivateRoute>,
+        loader: ({params}) => fetch(`https://the-career-maker-server-eight.vercel.app/services/${params.id}`)
+      }
     ],
   },
   {

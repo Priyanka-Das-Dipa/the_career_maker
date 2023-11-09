@@ -16,13 +16,15 @@ const AddServices = () => {
     const location = form.location.value;
     const category = form.category.value;
     const serviceImage = form.serviceImage.value;
+    const serviceProvider = {
+      name: form.name.value,
+      image: form.image.value  
+    }
     const price = form.price.value;
-    const image = form.image.value; // User's image
-    const name = form.name.value;
     const description = form.description.value;
     const newService = {
       userImage,
-      name, image,
+      serviceProvider,
       userName,
       serviceName,
       area,
