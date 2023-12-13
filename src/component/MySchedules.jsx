@@ -41,6 +41,7 @@ const MySchedules = () => {
       <h1 className="my-12 text-4xl font-bold  text-center sm:text-5xl">
         All Schedules
       </h1>
+      
       <div className="max-w-[1200px] mx-auto flex gap-10">
         <div className="w-1/2">
           <h1 className="my-12 text-4xl font-bold  text-center sm:text-5xl">
