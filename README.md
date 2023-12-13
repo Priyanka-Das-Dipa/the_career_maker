@@ -8,8 +8,11 @@
 - In Services Section I have implement a search field where user can search the services by name of the service.
 # Unique Technology
 - React, Firebase, Mamba Ui, React Router DOM, React-Hot-toast, React Icons, SweetAlert.
+- CURD & JWT
 
 # Project Selling line:
+- The project is about a online Gym and Sports Service website. Where a user can find many kinds of services for themselves such as sports and gym related. 
+
 
 # Project Related Links:
 
