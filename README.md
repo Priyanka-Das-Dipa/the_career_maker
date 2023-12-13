@@ -1,16 +1,15 @@
 # React + Vite
 
 # There are some project feature
-
+## The Unique Feature:
 - In this project I have implemented Firebase Authentication
 - There is a dashboard, where user can view their schedule and their added services from the service section.
 - In dashboard section have a add service router where from user can add the services.
+- In Services Section I have implement a search field where user can search the services by name of the service.
+# Unique Technology
+- React, Firebase, Mamba Ui, React Router DOM, React-Hot-toast, React Icons, SweetAlert.
 
-- This is a online service based website
-- There are some popular services
-- User can search the services by the name of a service
-- User can update and delete the services
-- User can check their schedule in the mySchedule route
+# Project Selling line:
 
 # Project Related Links:
 
